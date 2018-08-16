@@ -1,0 +1,380 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+
+body { 
+  margin: 0;
+  background:#f2f2f2;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.ruler
+{
+height:0px;color:yellow;border-width: 0px;visibility: hidden;
+}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+.header {
+  overflow: hidden;
+  background-color: grey;
+  padding: 20px 10px;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+.header a.logo:hover {
+  background-color: grey;
+  color: black;
+}
+.header a:hover {
+  background-color: white;
+  color: black;
+}
+
+.header a.active {
+  background-color: orange;
+  color: white;
+}
+
+.header-right {
+  float: right;
+}
+
+ h1
+  {
+  font-size:45px;
+  }
+  h2
+  {
+  font-size:20px;
+  color:black;
+  }
+  .aboutus
+  {
+  padding:0px 0px 0px 24px;
+  color:orange;
+  }
+    .whoarewe
+  {
+  float:left;
+  width:50%;
+  padding:24px;
+  color:orange;
+  }
+  .flip-container {
+	perspective: 1000px;
+	height:50%;
+	float:left;
+	
+}
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 300px;
+	height:300px;
+	border-radius:5%;
+	
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+	
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+.project1
+{
+margin-left:10%;
+}
+.project2
+{
+margin-top:-10%;
+margin-left:70%;
+}
+.project3
+{
+margin-top:-10%;
+margin-left:130%;
+}
+  
+@media screen and (max-width: 650px) {
+  
+ .ruler
+  {
+  height:1px;color:yellow;border-width: 10px;visibility: hidden;
+  }
+	
+.project1
+{
+margin-left:10%;
+}
+.project2
+{
+
+margin-left:10%;
+}
+.project3
+{
+margin-left:10%;
+}
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .text {font-size: 11px}
+  .header-right {
+    float: none;
+  }
+  .images
+  {
+  height:200px;
+  }
+  h1
+  {
+  font-size:35px;
+  }
+  h2
+  {
+  font-size:15px;
+  color:black;
+  }
+  
+ 
+  }
+  </style>
+</head>
+<body>
+<div class="header">
+  <a href="#default" class="logo" style="color:black"><img src="logo.png"></a>
+  <div class="header-right">
+    <a  href="index.php">Home</a>
+	<a href="#" class="active">About</a>
+	<a href="projects.html">Projects</a>
+    <a  href="contactus.html" >Contact</a>
+  
+  </div>
+</div>
+<hr  style="height:3px;border-width:0;color:orange;background-color:orange;margin:0"> 
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="girl1.jpg" style="width:100%" class="images">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="girl2.jpg" style="width:100%" class="images">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="girl3.png" style="width:100%" class="images">
+  <div class="text"></div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+<div class="aboutus">
+<h1><b><u>About Us-</b></u></h1>
+</div>
+<hr  style="height:1px;border-width:0;color:orange;background-color:orange;margin:0">
+<br>
+<div class="whoarewe">
+<br>
+
+<center  class="project1">
+<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+	<div class="flipper">
+		<div class="front">
+			<img src="whoarewe.png" style="width:100%;border: 1px solid orange;
+    border-radius: 25px;"></img>
+		</div>
+		<div class="back">
+		<div >
+		<img  src="whoarewe2.png" style="border: 2px solid orange;
+    border-radius: 25px;" width="100%"></img>
+		<div style="position: absolute;top: 10%;left: 2%;color:black"><h2><u></u></h2>
+<h4>We are a bunch of enthusiasts aiming to bring change in lives of the girls who are unprivilaged and
+uneducated.We believe that girls are not uneducated by choice, but because they are left with no other 
+alternative.Girls are just as much a part of this country as any other individual and should be taught 
+well for the nations growth.</h4></div>
+</div>
+	</div>
+	</div>
+</div>
+</center>
+<hr class="ruler" noshade >
+<center class="project2" >
+<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+	<div class="flipper">
+		<div class="front">
+			<img src="whatdowedo.png" style="width:100%;border: 2px solid orange;
+    border-radius: 25px;"></img>
+		</div>
+		<div class="back">
+		<div >
+		<img  style = "border: 2px solid orange;
+    border-radius: 25px;" src="whoarewe2.png" width="100%"></img>
+		<div style="position: absolute;top: 0%;left: 1%;color:black"><h5>
+HIT(Help in Time) is a registered NGO based in Delhi and the largest in the world* working on the issue of Girl Child Education(GCE) with a team of dedicated and skilled professionals since the year 2018. HIT has reached out to over 200 children and 300 adults directly and over 1000 individuals indirectly since its inception.HIT is currently working in North West Delhi with a child centric model of intervention in the area of Girl Child Education (GCE) with a balanced emphasis on prevention and healing components. While the focus is on children,HIT also understands the need for reaching out to uneducated dropout girls and putting them to schools.</h5>
+</div >
+</div>
+		</div>
+	</div>
+</div>
+</center>
+<hr class="ruler" noshade >
+
+<center class="project3" >
+<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+	<div class="flipper">
+		<div class="front">
+			<img src="whywedo.png" style="width:100%;border: 2px solid orange;
+    border-radius: 25px;"></img>
+		</div>
+		<div class="back">
+		<div >
+		<img  style = "border: 2px solid orange;
+    border-radius: 25px;" src="whoarewe2.png" width="100%"></img>
+		<div style="position: absolute;top: 5%;left: 1%;color:black"><h5>
+If women in all over the world have a secondary education, child deaths would be cut to HALF, saving 3 million lives annually.According to UNESCO, if all the women have access to secondary education, 12 million children would be saved from stunted growth and malnutrition. Everyone deserves the chance to work for fair and equal pay; to provide for themselves and their family. Of course it is equally as valuable and admirable to stay at home and care for the family, but this should be a choice not the only choice. 
+</h5>
+</div >
+</div>
+		</div>
+	</div>
+</div>
+</center>
+
+</div>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+</body>
+</html>
